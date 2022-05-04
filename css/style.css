@@ -1,0 +1,89 @@
+:root {
+  --font: "Heebo", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-family: var(--font);
+}
+h1 {
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .form {
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.fields {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .fields {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 0rem;
+  }
+}
+
+.field {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.label {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.25rem;
+}
+
+input[type="text"]:focus ~ .label,
+input[type="text"]:valid ~ .label {
+  bottom: 2.5rem;
+  color: white;
+}
+
+input[type="submit"] {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  input[type="submit"] {
+    margin-top: 0;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}

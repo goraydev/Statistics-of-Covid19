@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estadísticas Covid</title>
+    <link rel="shortcut icon" href="img/covid.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-red-500">
+    <h1 class="container text-4xl text-center py-2 px-2">
+      Statistics of Covid19
+    </h1>
+
+    <form action="" id="form" class="container form">
+      <div class="fields">
+        <div class="field">
+          <input
+            class="p-2 outline-none rounded-md w-60"
+            type="text"
+            name="country"
+            id="country"
+            required
+          />
+          <label class="label" for="country">Country</label>
+        </div>
+        <div class="field">
+          <input
+            class="p-2 outline-none rounded-md w-60 font-light"
+            type="date"
+            name="date"
+            id="date"
+            required
+          />
+        </div>
+      </div>
+      <input
+        class="rounded-md font-light bg-gray-800 hover:bg-gray-50 text-gray-50 hover:text-gray-800 p-2 cursor-pointer w-32"
+        type="submit"
+        value="See tatistics"
+      />
+    </form>
+
+    <footer class="bg-gray-800 text-gray-50 text-center font-light p-2 footer w-full">
+      <p>All rights reserved &copy;<span class="rights">2022</span> . Design and Developed by Gerson Aguedo Yanac | GorayCode</p>
+    </footer>
+
+    <script src="js/getapi.js"></script>
+  </body>
+</html>
