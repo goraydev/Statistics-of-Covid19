@@ -103,3 +103,10 @@ input[type="submit"] {
   position: fixed;
   bottom: 0;
 }
+
+.card {
+  transition: transform ease-in-out 1s;
+}
+.card:hover {
+  transform: perspective(20rem) translateZ(1rem);
+}
