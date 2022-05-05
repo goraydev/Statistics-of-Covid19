@@ -18,7 +18,6 @@ function validateInputs(e) {
     e.preventDefault();
 
     getApi(country.value, date.value);
-    console.log(date.value);
 }
 
 

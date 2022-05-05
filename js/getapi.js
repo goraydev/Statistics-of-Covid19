@@ -14,8 +14,24 @@ export function getApi(country, date) {
 }
 
 function results(response) {
-    
-    const { country, day, cases, deathes, tests } = response.response[0];
+
+    if (response.response.length) {
+        console.log(response);
+    } else {
+        errorAlert();
+    }
+
+    /* const { country, day, cases, deathes, tests } = response.response[0];
+    console.log(cases); */
 
 }
 
+function errorAlert() {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Not found',
+        showConfirmButton: false,
+        timer: 2000
+    })
+}
