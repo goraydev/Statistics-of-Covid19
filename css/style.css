@@ -86,29 +86,20 @@ input[type="submit"] {
     margin-top: 0;
   }
 }
-
-.results {
-  border: 1px solid black;
+.results__img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 768px) {
+  .results__img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
-
-
-
-
