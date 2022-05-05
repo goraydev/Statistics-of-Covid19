@@ -1,9 +1,4 @@
-eventListeners();
-function eventListeners() {
-    document.addEventListener('DOMContentLoaded', getApi);
-}
-
-function getApi() {
+export function getApi(country, date) {
     const options = {
         method: 'GET',
         headers: {
@@ -12,8 +7,15 @@ function getApi() {
         }
     };
 
-    fetch('https://covid-193.p.rapidapi.com/statistics?country=Peru', options)
+    fetch(`https://covid-193.p.rapidapi.com/history?country=${country}&day=${date}`, options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => results(response))
         .catch(err => console.error(err));
 }
+
+function results(response) {
+    
+    const { country, day, cases, deathes, tests } = response.response[0];
+
+}
+

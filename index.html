@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estadísticas Covid</title>
+    <title>Statistics of Covid19</title>
     <link rel="shortcut icon" href="img/covid.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -51,12 +51,20 @@
       <input
         class="rounded-md font-light bg-gray-800 hover:bg-gray-50 text-gray-50 hover:text-gray-800 p-2 cursor-pointer w-32"
         type="submit"
-        value="See tatistics"
+        value="See statistics"
       />
     </form>
 
     <main class="container">
-      <div class="results mt-5"></div>
+      <section class="results mt-5">
+        <div class="results__countryDate">
+          <h2>Perú</h2>
+          <h3>2020-05-03</h3>
+        </div>
+        <div class="results__data">
+
+        </div>
+      </section>
     </main>
 
     <footer
@@ -68,7 +76,6 @@
       </p>
     </footer>
 
-    <script src="js/app.js"></script>
-    <script src="js/getapi.js"></script>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>

@@ -64,7 +64,11 @@ h1 {
 .label {
   position: absolute;
   bottom: 0.5rem;
-  left: 1.25rem;
+  left: 1rem;
+}
+
+input {
+  font-weight: 300;
 }
 
 input[type="text"]:focus ~ .label,
@@ -87,7 +91,24 @@ input[type="submit"] {
   border: 1px solid black;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   position: absolute;
   bottom: 0;
 }
+
+
+
+
