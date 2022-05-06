@@ -17,10 +17,8 @@ function results(response) {
 
     if (response.response.length) {
 
-        const results = document.querySelector('.results');
-        results.classList.remove('hidden');
         uiResults(response);
-        
+
     } else {
         errorAlert();
     }
@@ -49,6 +47,23 @@ function uiResults(response) {
 
     const pTest = document.querySelector('#pTests');
     pTest.textContent = tests.total;
+
+
+    const results = document.querySelector('.results');
+    results.classList.add('hidden');
+
+    //loading
+    const loading = document.querySelector('.container__results');
+    const divLoading = document.createElement('div');
+    divLoading.classList.add('spinner');
+    divLoading.classList.remove('hidden');
+    loading.appendChild(divLoading);
+
+    setTimeout(() => {
+
+        results.classList.remove('hidden');
+        divLoading.classList.add('hidden');
+    }, 2000);
 
 }
 
