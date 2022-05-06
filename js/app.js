@@ -8,10 +8,19 @@ fieldYear.textContent = year;
 const country = document.querySelector('#country');
 const date = document.querySelector('#date');
 const form = document.querySelector('#form');
+const results = document.querySelector('.results');
 
 eventListeners();
 function eventListeners() {
+
+    document.addEventListener('DOMContentLoaded', hiddenResults);
+
     form.addEventListener('submit', validateInputs);
+}
+
+
+function hiddenResults() {
+    results.classList.add('hidden');
 }
 
 function validateInputs(e) {

@@ -16,15 +16,42 @@ export function getApi(country, date) {
 function results(response) {
 
     if (response.response.length) {
-        console.log(response);
+
+        const results = document.querySelector('.results');
+        results.classList.remove('hidden');
+        uiResults(response);
+        
     } else {
         errorAlert();
     }
 
-    /* const { country, day, cases, deathes, tests } = response.response[0];
-    console.log(cases); */
 
 }
+
+
+function uiResults(response) {
+    console.log(response.response[0]);
+    const { country, day, cases, deaths, tests } = response.response[0];
+
+
+    const titleCountry = document.querySelector('.titleCountry');
+    titleCountry.textContent = country;
+
+    const titleDate = document.querySelector('.titleDate');
+    titleDate.textContent = day;
+
+
+    const pCases = document.querySelector('#pCases');
+    pCases.textContent = cases.total;
+
+    const pDeaths = document.querySelector('#pDeaths');
+    pDeaths.textContent = deaths.total;
+
+    const pTest = document.querySelector('#pTests');
+    pTest.textContent = tests.total;
+
+}
+
 
 function errorAlert() {
     Swal.fire({
